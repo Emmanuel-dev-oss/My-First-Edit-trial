@@ -1,0 +1,139 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light Gray Background */
+    color: #333; /* Dark Text */
+}
+
+.wrapper {
+    display: flex;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #f4f4f4, #e0e0e0); /* Gradient Background */
+}
+
+.side-nav {
+    width: 225px;
+    background-color: #222; /* Dark Gray */
+    padding: 20px;
+    color: #fff; /* White Text */
+    box-shadow: 5px 0 10px rgba(0, 0, 0, 0.2); /* Shadow for side-nav */
+}
+
+.nav-item {
+    padding: 15px;
+    cursor: pointer;
+    position: relative; /* To position the edit icon */
+    transition: background-color 0.3s ease;
+    list-style: none;
+    border-radius: 20px;
+}
+
+.nav-item:hover {
+    background-color: #333; /* Darker Gray on Hover */
+}
+
+.nav-item img {
+    margin-right: 10px;
+    width: 15px;
+    height: 15px;
+    border-radius: 10px;
+}
+
+.edit-icon {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: none; /* Hide edit icon by default */
+    cursor: pointer;
+}
+
+.nav-item:hover .edit-icon {
+    display: block; /* Show edit icon on hover */
+    transition: 0.6s ease;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.section {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff; /* White Background for Sections */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+    margin-top: 0;
+}
+
+.edit-section {
+    display: none; /* Hide the edit section by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 100; /* Ensure it's above other content */
+    width: 300px; /* Adjust width as needed */
+}
+
+.edit-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+#edit-text {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    resize: vertical; /* Allow resizing the textarea */
+    height: 100px; /* Adjust height as needed */
+}
+
+.edit-section button{
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.edit-section button:hover {
+    background-color: #45a049;
+}
+
+.edit-section.show {
+    display: block;
+}
+
+.main-content .section p {
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Add ellipsis (...) for truncated text */
+}
+
+#saved-descriptions {
+    margin-top: 10px;
+}
+
+#saved-descriptions ul {
+    list-style-type: disc; /* Use a disc list style */
+    padding-left: 20px; /* Indent the list */
+}
+
+#saved-descriptions li {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #555;
+}

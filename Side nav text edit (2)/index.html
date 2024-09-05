@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Side-Nav with Dynamic Content</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzG0sAfKLlQWPqeCNTANoZcNGT+0O2eYZDmz0P+FtTEkyk/zJ+fkXdyH+tJhz" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="wrapper">
+        <nav class="side-nav">
+            <ul>
+                <li class="nav-item" data-section="section-1">
+                     <!-- <i class="fas fa-home"></i> -->
+                    <img src="images.png"></img> Home
+                    <div class="edit-icon">
+                        <img src="images.png"></img> 
+                        <!-- <i class="fas fa-edit"></i> -->
+                    </div>
+                </li>
+                <li class="nav-item" data-section="section-2">
+                    <!-- <i class="fas fa-user"></i>  -->
+                    <img src="images.png"></img> About
+                    <div class="edit-icon">
+                        <!-- <i class="fas fa-edit"></i> -->
+                        <img src="images.png"></img> 
+                    </div>
+                </li>
+                <li class="nav-item" data-section="section-3">
+                    <!-- <i class="fas fa-briefcase"></i> -->
+                    <img src="images.png"></img>  Services
+                    <div class="edit-icon">
+                        <!-- <i class="fas fa-edit"></i> -->
+                        <img src="images.png"></img> 
+                    </div>
+                </li>
+                <li class="nav-item" data-section="section-4">
+                    <!-- <i class="fas fa-envelope"></i>  -->
+                    <img src="images.png"></img> Contact
+                    <div class="edit-icon">
+                        <!-- <i class="fas fa-edit"></i> -->
+                        <img src="images.png"></img> 
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="main-content">
+            <section id="section-1" class="section">
+                <h2>Welcome to our website</h2>
+                <p>This is the Home section.</p>
+                <div id="saved-descriptions">
+                    <ul>
+                        <!-- Saved descriptions will be added here -->
+                    </ul>
+                </div>
+            </section>
+            <section id="section-2" class="section">
+                <h2>About Us</h2>
+                <p>This is the About section.</p>
+                <div id="saved-descriptions">
+                    <ul>
+                        <!-- Saved descriptions will be added here -->
+                    </ul>
+                </div>
+            </section>
+            <section id="section-3" class="section">
+                <h2>Our Services</h2>
+                <p>This is the Services section.</p>
+                <div id="saved-descriptions">
+                    <ul>
+                        <!-- Saved descriptions will be added here -->
+                    </ul>
+                </div>
+            </section>
+            <section id="section-4" class="section">
+                <h2>Contact Us</h2>
+                <p>This is the Contact section.</p>
+                <div id="saved-descriptions">
+                    <ul>
+                        <!-- Saved descriptions will be added here -->
+                    </ul>
+                </div>
+            </section>
+            <div class="edit-section">
+                <form id="edit-form">
+                    <textarea id="edit-text" placeholder="Enter description..."></textarea>
+                    <button type="submit" id="save-button">Save</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
